@@ -9,7 +9,7 @@ export type PersonDetailProps = Person;
 //
 //}
 
-const PersonDetail = ({ id, name, details }: PersonDetailProps) => {
+const PersonDetail = ({ name, details }: PersonDetailProps) => {
 
     //fallback処理中かの判定
     const router = useRouter();
@@ -58,8 +58,10 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
 
+    /*
     const response = await fetch('http://localhost:4001/persons');
     const persons: Person[] = await response.json();
+    */
 
     /*
     const paths = persons.map(
@@ -68,7 +70,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
                 params:{ id:person.id.toString() }
             };
     });
- */
+    */
 
     return (
         {
